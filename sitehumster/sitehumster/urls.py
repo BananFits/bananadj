@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from humster import views
+from humster.views import page_not_found, page
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('humster.urls')),
-
 ]
+
+handler404 = page_not_found
+handler500 = page
