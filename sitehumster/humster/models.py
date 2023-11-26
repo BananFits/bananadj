@@ -16,10 +16,11 @@ class Kvantorium(models.Model):
     is_excellent = models.BooleanField(max_length=15)
     is_not_excellent = models.BooleanField(max_length=15)
 
-class Favourite_book(models.Model):
-    title = models.CharField(max_length=10)
-    summary = models.CharField(max_length=10)
-    author = models.CharField(max_length=10)
-    cost = models.CharField(max_length=15)
-    is_interesting = models.BooleanField(max_length=15)
-    is_not_interesting = models.BooleanField(max_length=15)
+
+class Favourite_book_1(models.Model):
+    title = models.CharField(max_length=100)
+    summary = models.TextField(max_length=255)
+    author = models.CharField(max_length=30)
+    cost = models.IntegerField()
+    is_interesting_or_not = models.BooleanField(default=True or False)
+
