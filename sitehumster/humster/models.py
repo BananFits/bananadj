@@ -13,5 +13,13 @@ class Kvantorium(models.Model):
     name = models.CharField(max_length=10)
     patronymic = models.CharField(max_length=10, blank=True)
     Birthday = models.DateTimeField(max_length=15)
-    is_excellent = models.BooleanField(default=True)
+    is_excellent = models.BooleanField(max_length=15)
+    is_not_excellent = models.BooleanField(max_length=15)
 
+class Favourite_book(models.Model):
+    title = models.CharField(max_length=10)
+    summary = models.CharField(max_length=10)
+    author = models.CharField(max_length=10)
+    cost = models.CharField(max_length=15)
+    is_interesting = models.BooleanField(max_length=15)
+    is_not_interesting = models.BooleanField(max_length=15)
